@@ -1,0 +1,10 @@
+def time_deposit(principal, rate, period):
+ 
+    amount = principal * (1 + rate / 100) ** period
+    return(round(amount))
+
+principal = int(input('輸入本金: '))
+rate = int(input('輸入利率(輸入整數 %): '))
+period = int(input('輸入期數: '))
+
+print('最終本利和: ', f'{time_deposit(principal, rate, period):,d}')
